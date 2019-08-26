@@ -5,13 +5,12 @@ import com.google.zxing.common.BitMatrix;
 import com.gx.qrcode.QRCodeUtil;
 import com.gx.shorturl.ShortNetAddressUtil;
 import com.gx.shorturl.ShortUrl;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 
 /**
  * @author 高雄
@@ -19,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Description TODO
  * @createTime 2019年08月26日 09:09:00
  */
-@RestController
+@Controller
 @RequestMapping("/qrcode")
 public class MyTestController {
 
@@ -40,4 +39,10 @@ public class MyTestController {
             e.printStackTrace();
         }
     }
+
+    @RequestMapping("/hello/{abc}")
+    public String helloHtml(@PathVariable("abc") String abc) {
+        return abc;
+    }
+
 }

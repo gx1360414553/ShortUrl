@@ -1,2 +1,9 @@
 server:
   port: 8080
+
+spring:
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+
