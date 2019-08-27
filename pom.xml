@@ -40,6 +40,16 @@
             <artifactId>javase</artifactId>
             <version>3.3.0</version>
         </dependency>
+
+        <!--QrCode-->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+
+
+
         <!-- 长链接转短链接 相关 -->
         <dependency>
             <groupId>commons-codec</groupId>
