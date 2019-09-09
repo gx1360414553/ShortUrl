@@ -27,6 +27,11 @@ import java.util.HashMap;
 @RequestMapping("/qrcode")
 public class MyTestController {
 
+    /**
+     * 二维码展示
+     * @param request
+     * @param response
+     */
     @RequestMapping(value = "/generateqrcode", method = RequestMethod.GET)
     @ResponseBody
     public void generateQRCode4Product(HttpServletRequest request, HttpServletResponse response) {
@@ -46,7 +51,7 @@ public class MyTestController {
     }
 
     /**
-     * 二维码展示
+     * 二维码含log展示
      * @param response
      */
     @RequestMapping(value = "/logqrcode", method = RequestMethod.GET)
@@ -57,14 +62,13 @@ public class MyTestController {
         String path=serverpath.substring(1);//从路径字符串中取出工程路径
 
         //头像logo
-//        File logoFile = new File(path + "\\th.jpg");
+        File logoFile = new File(path + "\\th.jpg");
         //生成二维码地址
 //        String qrCodePath = ClassUtils.getDefaultClassLoader().getResource("/").getPath();
 //        File QrCodeFile = new File(qrCodePath + "\\test.jpg");
         String url = "https://www.baidu.com/";
 
-//        ZXingBackGroundUtils.drawLogoQRCode(logoFile, response.getOutputStream(), url);
-        QRCodeUtil.generateQRCodeStream(url,response);
+        ZXingBackGroundUtils.drawLogoQRCode(logoFile, response.getOutputStream(), url);
 
 
         } catch (IOException e) {
