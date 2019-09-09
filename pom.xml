@@ -39,15 +39,15 @@
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>javase</artifactId>
-            <version>3.3.0</version>
-        </dependency>
-
-        <!--QrCode-->
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>core</artifactId>
             <version>3.3.1</version>
         </dependency>
+
+<!--        &lt;!&ndash;QrCode&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.google.zxing</groupId>-->
+<!--            <artifactId>core</artifactId>-->
+<!--            <version>3.3.1</version>-->
+<!--        </dependency>-->
 
 
 
